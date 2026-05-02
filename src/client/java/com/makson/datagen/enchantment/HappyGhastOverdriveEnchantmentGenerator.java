@@ -2,7 +2,7 @@ package com.makson.datagen.enchantment;
 
 import com.makson.HappyGhastOverdrive;
 import com.makson.ModEnchantments;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -22,7 +22,7 @@ import java.util.concurrent.CompletableFuture;
 
 
 public class HappyGhastOverdriveEnchantmentGenerator extends FabricDynamicRegistryProvider {
-    public HappyGhastOverdriveEnchantmentGenerator(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    public HappyGhastOverdriveEnchantmentGenerator(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
