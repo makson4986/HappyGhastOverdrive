@@ -10,7 +10,7 @@ import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.EmptyLootItem;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.entries.UniformContainerBase;
 import net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction;
 
 public class LootModifier {
@@ -35,7 +35,7 @@ public class LootModifier {
         );
     }
 
-    private static LootPoolSingletonContainer.Builder<?> addEnchantmentBook(HolderLookup.RegistryLookup<Enchantment> registryLookup, ResourceKey<Enchantment> resourceKey, int weight) {
+    private static UniformContainerBase.Builder<?> addEnchantmentBook(HolderLookup.RegistryLookup<Enchantment> registryLookup, ResourceKey<Enchantment> resourceKey, int weight) {
         return LootItem.lootTableItem(Items.BOOK)
                 .setWeight(weight)
                 .apply(new EnchantRandomlyFunction.Builder().withEnchantment(registryLookup.getOrThrow(resourceKey)));
